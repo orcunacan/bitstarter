@@ -1,4 +1,4 @@
-var express = require('express');
+Avar express = require('express');
 
 var fs = require('fs');
 
@@ -9,7 +9,7 @@ var buffer = new Buffer(27);
 fs.readFileSync('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
-  buffer.write(data, "utf-8");  
+  buffer.write(data); 
 });
 
 app.get('/', function(request, response) {
