@@ -2,11 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 var buffer = new Buffer(200000);
-
-
-var http = require('http'),
-    fs = require('fs');
-
+var http = require('http');
 
 fs.readFile('index.html', function (err, html) {
     if (err) {
