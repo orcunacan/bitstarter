@@ -6,7 +6,6 @@ var buffer = new Buffer(200000);
 buffer.write(fs.readFileSync('index.html', 'utf-8'), 'utf-8');
 
 app.get('/', function(request, response) {
-    response.writeHeader(200, {"Content-Type": "text/html"});    
     response.send(buffer.toString('utf-8', 0, 27));
     response.end();
     console.log(data);
