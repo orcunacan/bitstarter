@@ -12,6 +12,11 @@ app.get('/', function(request, response) {
 
 // app.register('.html', require('jade'));
 
+var connect = require('connect');
+connect.createServer(
+    connect.static(__dirname)
+).listen(80);
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
     console.log("Listening on " + port);
